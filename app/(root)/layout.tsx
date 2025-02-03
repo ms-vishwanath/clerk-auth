@@ -13,12 +13,11 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <SignedOut>
-        <SignInButton mode="modal" />
+        <div className="flex flex-col justify-center items-center h-dvh">
+          <SignInButton mode="modal" />
+        </div>
       </SignedOut>
-      <SignedIn>
-        <UserButton />
-        {children}
-      </SignedIn>
+      <SignedIn>{children}</SignedIn>
     </ClerkProvider>
   );
 }
